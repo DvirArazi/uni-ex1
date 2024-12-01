@@ -118,7 +118,7 @@ public class Ex1 {
   public static boolean equals(String n1, String n2) {
     boolean ans = true;
     // add your code here
-
+    ans =  number2Int(n1) == number2Int(n2);
     ////////////////////
     return ans;
   }

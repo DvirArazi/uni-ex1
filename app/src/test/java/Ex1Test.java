@@ -54,6 +54,7 @@ public class Ex1Test {
         assertEquals(123, Ex1.number2Int("123"));
         assertEquals(37, Ex1.number2Int("100101b2"));
         assertEquals(483, Ex1.number2Int("1E3bG"));
+        assertEquals(14, Ex1.number2Int("10bE"));
     }
 
     @Test
@@ -62,5 +63,12 @@ public class Ex1Test {
         assertEquals(Ex1.int2Number(22020, 14), "804CbE");
         assertEquals(Ex1.int2Number(14440300, 9), "30148327b9");
     }
+
+    @Test
+    void equalsTest() {
+        assertEquals(true, Ex1.equals("101b2", "5"));
+        assertEquals(true, Ex1.equals("112b3", "10bE"));
+    }
+
     // Add additional test functions - test as much as you can.
 }

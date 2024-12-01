@@ -6,6 +6,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Ex1Main",
+      "request": "launch",
+      "mainClass": "Ex1Main"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}",

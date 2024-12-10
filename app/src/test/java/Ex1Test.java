@@ -21,7 +21,7 @@ public class Ex1Test {
     }
 
     @Test
-    void isBasisNumberTest() {
+    void isBasisNumberTest() throws Exception {
         String[] good = { "1", "1b2", "01b2", "123bA", "ABbG", "0bA" };
         for (int i = 0; i < good.length; i = i + 1) {
             boolean ok = Ex1.isNumber(good[i]);
@@ -59,9 +59,9 @@ public class Ex1Test {
 
     @Test
     void number2IntTest() {
-        assertEquals(Ex1.int2Number(5, 2), "101b2");
-        assertEquals(Ex1.int2Number(22020, 14), "804CbE");
-        assertEquals(Ex1.int2Number(14440300, 9), "30148327b9");
+        assertEquals("101b2", Ex1.int2Number(5, 2));
+        assertEquals("804CbE", Ex1.int2Number(22020, 14));
+        assertEquals("30148327b9", Ex1.int2Number(14440300, 9));
     }
 
     @Test

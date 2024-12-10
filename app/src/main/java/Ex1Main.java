@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  */
 public class Ex1Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
     Scanner sc = new Scanner(System.in);
     String num1 = "", num2 = "", quit = "quit";
     while (!num1.equals(quit) && !num2.equals(quit)) {

@@ -28,6 +28,9 @@ public class Ex1 {
   public static int number2Int(String num) {
     int ans = -1;
     // add your code here
+
+    // 123b5
+    // 1*5^2 + 2*5^1 + 3*5^0
     if (!isNumber(num))
       return -1;
 
@@ -62,17 +65,14 @@ public class Ex1 {
 
     String number = parts[0];
     String base = parts.length == 1 ? "A" : parts[1];
-    boolean isBase = base.length() == 1 &&
-        digits.chars().anyMatch(d -> d == base.charAt(0));
 
-    if (!isBase)
+    boolean isBase = !(base.length() == 1 && digits.substring(2).contains(base));
+    if (isBase)
       return false;
 
+    String digitsSub = digits.substring(0, digits.indexOf(base));
     boolean isNumber = number.length() != 0 && number.chars().allMatch(
-        c -> digits
-            .substring(0, digits.indexOf(base.charAt(0))).chars()
-            .anyMatch(d -> d == c));
-
+        (digit) -> digitsSub.contains((char)digit + ""));
     if (!isNumber)
       return false;
 
@@ -118,7 +118,7 @@ public class Ex1 {
   public static boolean equals(String n1, String n2) {
     boolean ans = true;
     // add your code here
-    ans =  number2Int(n1) == number2Int(n2);
+    ans = number2Int(n1) == number2Int(n2);
     ////////////////////
     return ans;
   }
